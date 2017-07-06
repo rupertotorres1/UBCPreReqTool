@@ -1,5 +1,5 @@
 from pickle import load
-dict = load(open("dictCoursesPreCoReqs.p", "rb"))
+dict = load(open("dictCoursesPreCoReqs.p", "rb"), encoding="utf-8")
 
 print ("Welcome! This tool helps you find out which courses require the given course as a pre-req or co-req. I hope it is useful.")
 
