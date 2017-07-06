@@ -26,8 +26,7 @@ def interaction():
 
 		sys.stdout.write(courseInput + " is a pre-req or co-req for:")
 		print("")
-		'''print(preCoReqFor)
-		print("")'''
+		
 		preCoReqFor.sort()
 		for p in preCoReqFor:
 			sys.stdout.write("| " + str(p) + " |")
