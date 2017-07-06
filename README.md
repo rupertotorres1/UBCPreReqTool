@@ -10,3 +10,4 @@ Instructions:
   3. Extract the zipped/compressed folder and open the resulting folder.
   4. Run main.py
   
+Note that this tool does not take into account when the pre-req can be satisfied by one of two courses or different combinations of courses. This just takes into account if the course appears in the "Pre-req:" section of the website.  
