@@ -3,6 +3,7 @@ try:
 except NameError:
    pass
 
+import sys
 from pickle import load
 dict = load(open("dictCoursesPreCoReqs.p", "rb"))
 
@@ -23,8 +24,14 @@ def interaction():
 			if (courseInput in preCoReqs):
 				preCoReqFor.append(course)
 
-		print(courseInput, "is a pre-req or co-req for:")
-		print(preCoReqFor)
+		sys.stdout.write(courseInput + " is a pre-req or co-req for:")
+		print("")
+		'''print(preCoReqFor)
+		print("")'''
+		preCoReqFor.sort()
+		for p in preCoReqFor:
+			sys.stdout.write("| " + str(p) + " |")
+		print("")
 		print("")
 
 		doAgain = input("Would you like to look up another course?[yes/no] ").lower()
