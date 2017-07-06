@@ -1,3 +1,8 @@
+try:
+   input = raw_input
+except NameError:
+   pass
+
 from pickle import load
 dict = load(open("dictCoursesPreCoReqs.p", "rb"))
 
