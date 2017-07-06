@@ -12,29 +12,28 @@ print ("Welcome! This tool helps you find out which courses require the given co
 def interaction():
 	print ("")
 
-	courseInput = input("Which course would you like to look up? ").upper()
-	print("")
-	preCoReqFor = []
-
-	if (not(courseInput in dict)):
-		print ("That is not a valid course")
-		interaction()
-	else:
-		for course, preCoReqs in dict.items():
-			if (courseInput in preCoReqs):
-				preCoReqFor.append(course)
-
-		sys.stdout.write(courseInput + " is a pre-req or co-req for:")
+	courseInput = input("Which course would you like to look up? (Enter x to exit): ").upper()
+	if (courseInput != "X"):
 		print("")
-		
-		preCoReqFor.sort()
-		for p in preCoReqFor:
-			sys.stdout.write("| " + str(p) + " |")
-		print("")
-		print("")
+		preCoReqFor = []
 
-		doAgain = input("Would you like to look up another course?[yes/no] ").lower()
-		if (doAgain == "yes"):
+		if (not(courseInput in dict)):
+			print ("That is not a valid course")
+			interaction()
+		else:
+			for course, preCoReqs in dict.items():
+				if (courseInput in preCoReqs):
+					preCoReqFor.append(course)
+
+			sys.stdout.write(courseInput + " is a pre-req or co-req for:")
+			print("")
+			
+			preCoReqFor.sort()
+			for p in preCoReqFor:
+				sys.stdout.write("| " + str(p) + " |")
+			print("")
+			print("")
+
 			interaction()
 
 interaction()
