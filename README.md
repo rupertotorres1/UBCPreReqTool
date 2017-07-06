@@ -5,7 +5,7 @@ This tool helps you find out which courses require a given course as a pre-req o
 
 
 Instructions:
-  1. Install Python, if you haven't already (Mac OS already comes with Python pre-installed).
+  1. Install Python 3, if you haven't already.
   2. On Github, click on the green button that says "Clone or download", then "Download ZIP".
   3. Extract the zipped/compressed folder and open the resulting folder.
   4. Run main.py
