@@ -12,24 +12,24 @@ print ("Welcome! This tool helps you find out which courses require the given co
 def interaction():
 	print ("")
 
-	courseInput = input("Which course would you like to look up? (Enter x to exit): ").upper()
-	if (courseInput != "X"):
+	course_input = input("Which course would you like to look up? (Enter x to exit): ").upper()
+	if (course_input != "X"):
 		print("")
-		preCoReqFor = []
+		pre_co_req_for = []
 
-		if (not(courseInput in dict)):
+		if (not(course_input in dict)):
 			print ("That is not a valid course")
 			interaction()
 		else:
-			for course, preCoReqs in dict.items():
-				if (courseInput in preCoReqs):
-					preCoReqFor.append(course)
+			for course, pre_co_reqs in dict.items():
+				if (course_input in pre_co_reqs):
+					pre_co_req_for.append(course)
 
-			sys.stdout.write(courseInput + " is a pre-req or co-req for:")
+			sys.stdout.write(course_input + " is a pre-req or co-req for:")
 			print("")
 			
-			preCoReqFor.sort()
-			for p in preCoReqFor:
+			pre_co_req_for.sort()
+			for p in pre_co_req_for:
 				sys.stdout.write("| " + str(p) + " |")
 			print("")
 			print("")
